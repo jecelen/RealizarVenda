@@ -8,21 +8,22 @@ public class ClienteView extends JFrame{
 	
 	private JButton buscaCPF;
     private JButton cancelaVenda;
-    private javax.swing.JTextField codProd;
-    private javax.swing.JTextField codProd1;
-    private javax.swing.JTextField codProd2;
-    private javax.swing.JButton confirmaVenda;
-    private javax.swing.JLabel cpf;
-    private javax.swing.JTextField dadoCPF;
-    private javax.swing.JTextField dadoNomeCli;
-    private javax.swing.JComboBox<String> dadoPagamento;
-    private javax.swing.JTextField descrProd;
-    private javax.swing.JTextField descrProd1;
-    private javax.swing.JTextField descrProd2;
-    private javax.swing.JLabel entrega;
-    private javax.swing.JRadioButton entregaNao;
-    private javax.swing.JRadioButton entregaSim;
-    private javax.swing.JPanel jPanel1;
+    private JTextField codProd;
+    private JTextField codProd1;
+    private JTextField codProd2;
+    private JButton confirmaVenda;
+    private JLabel cpf;
+    private JTextField dadoCPF;
+    private JTextField dadoNomeCli;
+    private JComboBox<String> dadoPagamento;
+    private JTextField descrProd;
+    private JTextField descrProd1;
+    private JTextField descrProd2;
+    private JLabel entrega;
+    private ButtonGroup dadoEntrega;
+    private JRadioButton entregaNao;
+    private JRadioButton entregaSim;
+    private JPanel jPanel1;
     private javax.swing.JButton maisProd;
     private javax.swing.JLabel nomeCli;
     private javax.swing.JLabel pagamento;
@@ -58,6 +59,7 @@ public class ClienteView extends JFrame{
         nomeCli = new javax.swing.JLabel();
         dadoNomeCli = new javax.swing.JTextField();
         entrega = new javax.swing.JLabel();
+        dadoEntrega = new ButtonGroup(); 
         entregaSim = new javax.swing.JRadioButton();
         entregaNao = new javax.swing.JRadioButton();
         pagamento = new javax.swing.JLabel();
@@ -168,12 +170,18 @@ public class ClienteView extends JFrame{
 
         entregaSim.setFont(new Font("Roboto Light", 1, 12)); 
         entregaSim.setForeground(new java.awt.Color(102, 102, 102));
+        entregaSim.setBackground(new Color(255, 255, 255));
         entregaSim.setText("Sim");
 
 
         entregaNao.setFont(new Font("Roboto Light", 1, 12)); 
-        entregaNao.setForeground(new java.awt.Color(102, 102, 102));
+        entregaNao.setForeground(new Color(102, 102, 102));
+        entregaNao.setBackground(new Color(255, 255, 255));
         entregaNao.setText("Não");
+        
+        dadoEntrega.add(entregaSim);
+        dadoEntrega.add(entregaNao);
+        
 
         pagamento.setFont(new Font("Roboto Light", 1, 12)); 
         pagamento.setForeground(new java.awt.Color(102, 102, 102));
